@@ -6,10 +6,17 @@
   <body>
     <div class="container">
       <h1>QUOTES</h1>
-      <p>Inspiring lives with words of encouragement and wisdom</p>
+      <p>Inspiring lives with words of encouragement and wisdom</p><br />
       <div class="row">
         <div class="col-md-6">
-
+          <ul>
+            <div *ngFor="let quote of quotes">
+              <li>{{quote.description}}</li>
+                 <p>{{quote.upvote}} Likes , {{quote.downvote}} Dislikes</p>
+                 <br/>
+                <p>{{quote.name}}</p>
+            </div>
+          </ul>
         </div>
         <div class="col-md-6">
           <app-quote-form></app-quote-form>
