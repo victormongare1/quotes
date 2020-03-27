@@ -9,17 +9,22 @@
       <p>Inspiring lives with words of encouragement and wisdom</p><br />
       <div class="row">
         <div class="col-md-6">
-          <ul>
-            <div *ngFor="let quote of quotes">
-              <li>{{quote.description}}</li>
-                 <p>{{quote.upvote}} Likes , {{quote.downvote}} Dislikes</p>
-                 <br/>
-                <p>{{quote.name}}</p>
-            </div>
-          </ul>
+          <div class="card">
+            <h2>CURRENT QUOTES</h2>
+            <ul>
+              <div *ngFor="let quote of quotes ; let i = index">
+                <li>{{quote.description}}</li>
+
+                <button (click)= "toggleDetails(i)" class="btn btn-primary">Details</button> 
+                <app-name *ngIf=quote.showName [quote]='quote'> </app-name>  
+              </div>
+            </ul>
+          </div>
         </div>
         <div class="col-md-6">
-          <app-quote-form></app-quote-form>
+          <div class="card">
+            <app-quote-form></app-quote-form>
+          </div>
         </div>
       </div>
     </div>

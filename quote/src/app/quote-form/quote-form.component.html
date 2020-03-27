@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
   <body>
-    
+    <h2 class="text-center">ADD A QUOTE</h2>
+    <hr>
+    <form #goalForm='ngForm'>
+        <div class="form-group">
+  
+            <label for="name">QUOTE :</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="newQuote.description" name="description" #name='ngModel' required>
+           
+        </div>
+        <div class="form-group">
+  
+            <label for="complete">Originally By :</label>
+            <input type="text" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" class="form-control" required>
+            <div [hidden]="name.valid || name.pristine"    
+            class="alert alert-danger">
+              <p> Who Originally said it ?</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Add Quote</button> 
+    </form>
   </body>
 </html>

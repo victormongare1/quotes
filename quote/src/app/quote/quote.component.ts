@@ -14,7 +14,9 @@ export class QuoteComponent implements OnInit {
     new Quote(0 , 0 , "Never give up " , "unknown"),
     new Quote(0, 0 , "Go for the money" ,"unknown")
   ]
-
+  toggleDetails(index){
+    this.quotes[index].showName = !this.quotes[index].showName
+  }
 
   constructor() { }
 
