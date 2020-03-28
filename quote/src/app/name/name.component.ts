@@ -9,15 +9,21 @@ import{ Quote } from '../quote'
 export class NameComponent implements OnInit {
   
   @Input () quote : Quote;
+  @Output() toDelete = new EventEmitter <boolean>()
+
+  deleteQuote(remove : boolean){
+    this.toDelete.emit(remove);
+  }
+
   @Output() isUpvote = new EventEmitter <boolean>()
 
     upVote(like : boolean){
-      this.isUpvote.emit(like)
+      this.isUpvote.emit(like);
     }
   @Output () isDownvote = new EventEmitter <boolean>()
 
     downVote(dislike : boolean){
-      this.isDownvote.emit(dislike)
+      this.isDownvote.emit(dislike);
     }
 
   constructor() { }

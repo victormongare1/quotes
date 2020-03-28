@@ -28,8 +28,16 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].downvote = ( this.quotes[index].downvote + 1 )
    }
   }
+  quoteDelete(index,toDelete){
+    if(toDelete){
+      let itemDelete=confirm(`Do you want to delete this quote`)
+    
+      if(itemDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
   addNewQuote(quote){
-    let quoteLenght=this.quotes.length
     this.quotes.push(quote)
   }
   
