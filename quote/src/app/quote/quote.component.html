@@ -16,7 +16,7 @@
                 <li>{{quote.description}}</li>
 
                 <button (click)= "toggleDetails(i)" class="btn btn-primary">Details</button> 
-                <app-name *ngIf=quote.showName [quote]='quote' (isUpvote) ="addUpvote($event)" (isDownvote)="addDownVote($event)"> </app-name>  
+                <app-name *ngIf=quote.showName [quote]='quote' (isUpvote) ="addUpvote($event,i)" (isDownvote)="addDownVote($event,i)"> </app-name>  
               </div>
             </ul>
           </div>

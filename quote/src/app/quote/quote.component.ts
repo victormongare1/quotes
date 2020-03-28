@@ -9,23 +9,24 @@ import{ Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes : Quote[]=[
-    new Quote(0 , 0, "Never judge a book by its cover", "unknown"),
-    new Quote(0 , 0, "Do what you love" ,"unknown"),
-    new Quote(0 , 0 , "Never give up " , "unknown"),
-    new Quote(0, 0 , "Go for the money" ,"unknown")
+    new Quote(0 , 0, "Never judge a book by its cover", "unknown","unknown"),
+    new Quote(0 , 0, "Do what you love" ,"unknown","unknown"),
+    new Quote(0 , 0 , "Never give up " , "unknown","unknown"),
+    new Quote(0, 0 , "Go for the money" ,"unknown","unknown")
   ]
   toggleDetails(index){
     this.quotes[index].showName = !this.quotes[index].showName
   }
 
-  addUpvote(quote){
-    let quoteLength=this.quotes.length;
-    quote.upvote=quoteLength+1;
-    
+  addUpvote(index,isUpvote){
+   if(isUpvote){
+    this.quotes[index].upvote =(this.quotes[index].upvote +1 )
+   }
   }
-  addDownVote(quote){
-   let quoteLength=this.quotes.length;
-   quote.downvote=quoteLength+1;
+  addDownVote(index,isDownvote){
+   if(isDownvote){
+    this.quotes[index].downvote = ( this.quotes[index].downvote + 1 )
+   }
   }
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
