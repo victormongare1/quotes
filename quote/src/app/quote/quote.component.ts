@@ -29,9 +29,7 @@ export class QuoteComponent implements OnInit {
    }
   }
   addNewQuote(quote){
-    let quoteLength = this.quotes.length;
-    quote.upvote= quote.length
-    quote.downvote= quote.length
+    let quoteLenght=this.quotes.length
     this.quotes.push(quote)
   }
   
