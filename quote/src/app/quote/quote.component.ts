@@ -20,12 +20,14 @@ export class QuoteComponent implements OnInit {
 
   addUpvote(index,isUpvote){
    if(isUpvote){
-    this.quotes[index].upvote =(this.quotes[index].upvote +1 )
+   let upvote= this.quotes[index].upvote
+   let like= Math.ceil(upvote + 1)
+   this.quotes[index].upvote=like
    }
   }
-  addDownVote(index,isDownvote){
+  addDownvote(index,isDownvote){
    if(isDownvote){
-    this.quotes[index].downvote = ( this.quotes[index].downvote + 1 )
+    this.quotes[index].downvote = Math.ceil( this.quotes[index].downvote + 1 )
    }
   }
   quoteDelete(index,toDelete){

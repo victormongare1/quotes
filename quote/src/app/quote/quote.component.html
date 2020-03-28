@@ -6,17 +6,17 @@
   <body>
     <div class="container">
       <h1>QUOTES</h1>
-      <p>Inspiring lives with words of encouragement and wisdom</p><br />
+      <p class="intro">Inspiring lives with words of encouragement and wisdom</p><br />
       <div class="row">
         <div class="col-md-6">
           <div class="card">
-            <h2>CURRENT QUOTES</h2>
+            <h2>CURRENT QUOTES :</h2>
             <ul>
               <div *ngFor="let quote of quotes ; let i = index">
                 <li>{{quote.description}}</li>
 
                 <button (click)= "toggleDetails(i)" class="btn btn-primary">Details</button> 
-                <app-name *ngIf=quote.showName [quote]='quote' (isUpvote) ="addUpvote($event,i)" (isDownvote)="addDownVote($event,i)" (toDelete)="quoteDelete($event,i)"> </app-name>  
+                <app-name *ngIf=quote.showName [quote]='quote' (isUpvote) ="addUpvote($event,i)" (isDownvote)="addDownvote($event,i)" (toDelete)="quoteDelete($event,i)"> </app-name>  
               </div>
             </ul>
           </div>

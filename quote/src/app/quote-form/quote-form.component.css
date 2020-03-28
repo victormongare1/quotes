@@ -1,0 +1,24 @@
+h2{
+  font-size: 40px;
+  font-family: 'Trade Winds';
+  text-align: center;
+  background-image: url(/assets/img/ian-schneider-TamMbr4okv4-unsplash.jpg);
+  color: white;
+  
+}
+form{
+  font-family: 'Yeon Sung';
+  font-size: 20px;
+  background-image: url(/assets/img/ian-schneider-TamMbr4okv4-unsplash.jpg);
+  opacity: O.8;
+  color: white;
+}
+#description{
+  background-color: transparent;
+}
+#author{
+  background-color: transparent;
+}
+#name{
+  background-color: transparent;
+}

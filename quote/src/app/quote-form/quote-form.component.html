@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h2 class="text-center">ADD A QUOTE</h2>
+    <h2>ADD A QUOTE :</h2>
     <hr>
     <form (ngsubmit)="submitQuote()" #quoteForm="ngForm">
         <div class="form-group">
@@ -12,7 +12,7 @@
             class="alert alert-danger">
               <p> Quote is required</p>
             </div>
-        </div>
+        </div><br />
         <div class="form-group">
   
             <label for="name">Originally By :</label>
@@ -21,7 +21,7 @@
             class="alert alert-danger">
               <p> Your name ?</p>
             </div>
-        </div>
+        </div><br />
         <div class="form-group">
   
           <label for="author">UPLOADED BY :</label>
@@ -30,7 +30,7 @@
           class="alert alert-danger">
             <p>Your name</p>
           </div>
-      </div>
+      </div><br>
         <button type="submit" class="btn btn-success" (click)="submitQuote()">Add Quote</button> 
     </form>
   </body>

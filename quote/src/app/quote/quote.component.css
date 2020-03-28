@@ -1,0 +1,31 @@
+
+body{
+  background-image: url(/assets/img/ian-schneider-TamMbr4okv4-unsplash.jpg);
+  color: white;
+  
+}
+h1{
+  text-decoration: underline;
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Lobster';
+}
+h2{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Trade winds';
+}
+.card{
+  font-family: 'Yeon Sung';
+  font-size: 20px;
+  background-color: transparent;
+  opacity: 3.5;
+}
+.intro{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Lacquer';
+}
+form{
+  background: transparent;
+}
