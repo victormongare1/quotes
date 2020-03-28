@@ -3,16 +3,16 @@
   <body>
     <h2 class="text-center">ADD A QUOTE</h2>
     <hr>
-    <form #goalForm='ngForm'>
+    <form (ngsubmit)="submitQuote()" #quoteForm="ngForm">
         <div class="form-group">
   
-            <label for="name">QUOTE :</label>
-            <input type="text" class="form-control" id="description" [(ngModel)]="newQuote.description" name="description" #name='ngModel' required>
+            <label for="description">QUOTE :</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="newQuote.description" name="description" #name="ngModel" required>
            
         </div>
         <div class="form-group">
   
-            <label for="complete">Originally By :</label>
+            <label for="name">Originally By :</label>
             <input type="text" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" class="form-control" required>
             <div [hidden]="name.valid || name.pristine"    
             class="alert alert-danger">

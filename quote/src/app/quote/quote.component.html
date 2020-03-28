@@ -16,14 +16,14 @@
                 <li>{{quote.description}}</li>
 
                 <button (click)= "toggleDetails(i)" class="btn btn-primary">Details</button> 
-                <app-name *ngIf=quote.showName [quote]='quote'> </app-name>  
+                <app-name *ngIf=quote.showName [quote]='quote' (isUpvote) ="addUpvote($event)" (isDownvote)="addDownVote($event)"> </app-name>  
               </div>
             </ul>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card">
-            <app-quote-form></app-quote-form>
+            <app-quote-form (addQuote)="addNewQuote ($event)" ></app-quote-form>
           </div>
         </div>
       </div>

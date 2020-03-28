@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input, Output ,EventEmitter} from '@angular/core';
 import{ Quote } from '../quote'
 
 @Component({
@@ -8,7 +8,18 @@ import{ Quote } from '../quote'
 })
 export class NameComponent implements OnInit {
   
-@Input () quote : Quote;
+  @Input () quote : Quote;
+  @Output() isUpvote = new EventEmitter <boolean>()
+
+    upVote(like : boolean){
+      this.isUpvote.emit(like)
+    }
+  @Output () isDownvote = new EventEmitter <boolean>()
+
+    downVote(dislike : boolean){
+      this.isDownvote.emit(dislike)
+    }
+
   constructor() { }
 
   ngOnInit(): void {
