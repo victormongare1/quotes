@@ -9,10 +9,11 @@ import{ Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes : Quote[]=[
-    new Quote(0 , 0, "Never judge a book by its cover", "unknown","unknown" ,new Date(2020,2,1)),
-    new Quote(0 , 0, "Do what you love" ,"unknown","unknown" ,new Date(2020,2,2) ),
-    new Quote(0 , 0 , "Never give up " , "unknown","unknown" ,new Date(2020,2,3)),
-    new Quote(0, 0 , "Go for the money" ,"unknown","unknown" ,new Date(2020,2,4))
+    new Quote(0 , 0, "Only when a  mosquito lands on your testicles will you know conflicts can be solved without violence", "Victor Mongare","Dalai Lama" ,new Date(2020,2,1)),
+    new Quote(0 , 0, "The biggest mistake is not trying at all" ,"Victor Mongare","Steve Jobs" ,new Date(2020,2,2) ),
+    new Quote(0 , 0 , "Never give up " , "Victor Mongare","John cena" ,new Date(2020,2,3)),
+    new Quote(0, 0 , "Don't think you are know you are" ,"Victor Mongare","Morpheus-The Matrix" ,new Date(2020,2,4)),
+    new Quote(0, 0 , "It is useless to meet revenge with revenge: it will heal nothing" ,"Victor Mongare","Frodo Baggins-Lord of the Rings" ,new Date(2020,2,5))
   ]
   toggleDetails(index){
     this.quotes[index].showName = !this.quotes[index].showName
