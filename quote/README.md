@@ -16,7 +16,7 @@ This is a web application created in order to see and post inspirational quotes.
 You can gain access to the code for the web landing page by forking from my github repository named quote .You can then make an offline copy by:
     *copying the url from my github repository.
     *typing git clone in the terminal followed by pasting the url
-You can also gain access of the web application online at https://victormongare1.github.io/quote 
+You can also gain access of the web application online at https://victormongare1.github.io/quotes
 ## Known Bugs
 .There are minimal bugs in the webpage.The media queries are not very effective when resizing .The images in the portfolio are also not sized effectively to fit into the webpage.The what we do icons are also not aligned.Report if there are other unknown bugs. The upvote and down vote may also not function effectively.The first quote can also not be deleted
 ## Technologies Used
