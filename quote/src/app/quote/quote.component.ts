@@ -9,10 +9,10 @@ import{ Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes : Quote[]=[
-    new Quote(0 , 0, "Never judge a book by its cover", "unknown","unknown" ,new Date(2020,3,1)),
-    new Quote(0 , 0, "Do what you love" ,"unknown","unknown" ,new Date(2020,3,2) ),
-    new Quote(0 , 0 , "Never give up " , "unknown","unknown" ,new Date(2020,3,3)),
-    new Quote(0, 0 , "Go for the money" ,"unknown","unknown" ,new Date(2020,3,4))
+    new Quote(0 , 0, "Never judge a book by its cover", "unknown","unknown" ,new Date(2020,2,1)),
+    new Quote(0 , 0, "Do what you love" ,"unknown","unknown" ,new Date(2020,2,2) ),
+    new Quote(0 , 0 , "Never give up " , "unknown","unknown" ,new Date(2020,2,3)),
+    new Quote(0, 0 , "Go for the money" ,"unknown","unknown" ,new Date(2020,2,4))
   ]
   toggleDetails(index){
     this.quotes[index].showName = !this.quotes[index].showName

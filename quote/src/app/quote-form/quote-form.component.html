@@ -31,15 +31,7 @@
             <p>Your name</p>
           </div>
       </div>
-      <div class="form-group">
-  
-        <label for="uploadDate">Upload date:</label>
-        <input type="date" id="uploadDate" [(ngModel)]="newQuote.uploadDate" name="uploadDate"     #uploadDate="ngModel"   required>
-        <div [hidden]="uploadDate.valid || uploadDate.pristine"    
-          class="alert alert-danger">
-          <p>Upload date?</p>
-        </div> 
-      </div>
+      
         <button type="submit" class="btn btn-success" (click)="submitQuote()">Add Quote</button> 
     </form>
   </body>
