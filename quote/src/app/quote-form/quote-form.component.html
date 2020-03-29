@@ -9,7 +9,7 @@
             <label for="description">QUOTE :</label>
             <input type="text" class="form-control" id="description" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required>
             <div [hidden]="description.valid || description.pristine"    
-            class="alert alert-danger">
+              class="alert alert-danger">
               <p> Quote is required</p>
             </div>
         </div><br />
@@ -18,7 +18,7 @@
             <label for="name">Originally By :</label>
             <input type="text" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" class="form-control" required>
             <div [hidden]="name.valid || name.pristine"    
-            class="alert alert-danger">
+              class="alert alert-danger">
               <p> Your name ?</p>
             </div>
         </div><br />
@@ -27,10 +27,19 @@
           <label for="author">UPLOADED BY :</label>
           <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
           <div [hidden]="author.valid || author.pristine"    
-          class="alert alert-danger">
+            class="alert alert-danger">
             <p>Your name</p>
           </div>
-      </div><br>
+      </div>
+      <div class="form-group">
+  
+        <label for="uploadDate">Upload date:</label>
+        <input type="date" id="uploadDate" [(ngModel)]="newQuote.uploadDate" name="uploadDate"     #uploadDate="ngModel"   required>
+        <div [hidden]="uploadDate.valid || uploadDate.pristine"    
+          class="alert alert-danger">
+          <p>Upload date?</p>
+        </div> 
+      </div>
         <button type="submit" class="btn btn-success" (click)="submitQuote()">Add Quote</button> 
     </form>
   </body>

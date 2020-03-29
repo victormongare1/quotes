@@ -8,7 +8,7 @@ This is a web application created in order to see and post inspirational quotes.
 * The app  needed custom components for various parts
 * It needed a custom directive to highlight quote with highest upvote
 * It needed a custom pipe to manage time
-* It needed a form to add new quotes
+* It needed a form to add new quotes`
 * It needed an option to delete quotes
 * It needed an option to upvote and downvote quotes
 
