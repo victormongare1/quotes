@@ -13,7 +13,10 @@
             <h2>CURRENT QUOTES :</h2>
             <ul>
               <div *ngFor="let quote of quotes ; let i = index">
-                <li>{{quote.description}}</li>
+                <li appHighlight *ngIf="highlightUpvote()===quote.upvote&& 
+                quote.upvote>0">{{quote.description}}</li>
+                <li *ngIf="highlightUpvote()!==quote.upvote || quote.upvote===0">{{quote.description}}</li>
+
 
                 <button (click)= "toggleDetails(i)" class="btn btn-primary">Details</button> 
                 <app-name *ngIf=quote.showName [quote]='quote' (isUpvote) ="addUpvote(i)" (isDownvote)="addDownvote(i)" (toDelete)="quoteDelete($event,i)"> </app-name>  

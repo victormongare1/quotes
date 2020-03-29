@@ -37,6 +37,25 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote)
   }
   
+startNumber:number
+lastNumber:number
+counter:number
+
+highlightUpvote(){
+
+  this.startNumber = 0
+  this.lastNumber = 0
+
+   for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+    this.lastNumber = this.quotes[this.counter].upvote;
+    if(this.lastNumber> this.startNumber){
+      this.startNumber = this.lastNumber
+    }
+  }
+      
+  return  this.startNumber
+}
+  
   constructor() { }
 
   ngOnInit(): void {
